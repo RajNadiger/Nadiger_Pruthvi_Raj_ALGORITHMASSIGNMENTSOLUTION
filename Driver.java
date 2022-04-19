@@ -5,8 +5,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.*;
 
-import com.assignment2.model.Company;
-import com.assignment2.service.StockServices;
+import com.assignment2.Company;
+import com.assignment2.StockServices;
 
 public class Driver {
     public static void main(String[] args) {
