@@ -62,21 +62,13 @@ public class StockServices {
     }
 
 
-    /**
-     * Dedicated function to display companies stock prices.
-     *
-     * @param companyArray array containing company objects
-     */
     private void displayCompanies(Stocks[] companyArray) {
         for (Stocks company : companyArray) {
             System.out.println(company.getStockPrice());
         }
     }
 
-    /**
-     * @param companyArray array containing company objects
-     * @param order ascending/descending order
-     */
+   
     private void mergeSort(Company[] companyArray, String order) {
         if (order.equalsIgnoreCase(DSC))
             sortArray(companyArray, 0, companyArray.length - 1, DSC);
