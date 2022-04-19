@@ -14,30 +14,30 @@ public class StockServices {
         displayCompanies(companyArray);
     }
 
-    public void displayStockPricesDsc(Company[] companyArray) {
+    public void displayStockPricesDsc(Stocks[] companyArray) {
         mergeSort(companyArray, DSC);
         System.out.println("Stock prices in descending order are :");
         displayCompanies(companyArray);
     }
 
-    public void displayNoOfCompaniesOnARise(Company[] companyArray) {
+    public void displayNoOfCompaniesOnARise(Stocks[] companyArray) {
         System.out.println("Total no of companies whose stock price rose today : " + countCompaniesForGrowth(companyArray, true));
     }
 
-    public void displayNoOfCompaniesOnAFall(Company[] companyArray) {
+    public void displayNoOfCompaniesOnAFall(Stocks[] companyArray) {
         System.out.println("Total no of companies whose stock price declined today : " + countCompaniesForGrowth(companyArray, false));
     }
 
-    private int countCompaniesForGrowth(Company[] companyArray, boolean b) {
+    private int countCompaniesForGrowth(Stocks[] companyArray, boolean b) {
         int count = 0;
-        for (Company company : companyArray) {
+        for (Stocks company : companyArray) {
             if ((b && company.isStockVariation()) || (!b && !company.isStockVariation()))
                 count++;
         }
         return count;
     }
 
-    public void searchStockPrice(Company[] companyArray, double value) {
+    public void searchStockPrice(Stocks[] companyArray, double value) {
         mergeSort(companyArray, ASC);
         int l, r, mid;
         l = 0;
@@ -67,8 +67,8 @@ public class StockServices {
      *
      * @param companyArray array containing company objects
      */
-    private void displayCompanies(Company[] companyArray) {
-        for (Company company : companyArray) {
+    private void displayCompanies(Stocks[] companyArray) {
+        for (Stocks company : companyArray) {
             System.out.println(company.getStockPrice());
         }
     }
@@ -84,7 +84,7 @@ public class StockServices {
             sortArray(companyArray, 0, companyArray.length - 1, ASC);
     }
 
-    public void sortArray(Company[] array, int left, int right, String order) {
+    public void sortArray(Stocks[] array, int left, int right, String order) {
         if (left < right) {
             int m = left + (right - left) / 2;
             sortArray(array, left, m, order);
@@ -93,11 +93,11 @@ public class StockServices {
         }
     }
 
-    public void merge(Company[] array, int l, int m, int r, String order) {
+    public void merge(Stocks[] array, int l, int m, int r, String order) {
         int n1 = m - l + 1;
         int n2 = r - m;
-        Company[] L = new Company[n1];
-        Company[] R = new Company[n2];
+       Stocks[] L = new Stocks[n1];
+        stocks[] R = new Stocks[n2];
         for (int i = 0; i < n1; ++i) {
             L[i] = array[l + i];
         }
