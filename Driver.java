@@ -16,10 +16,10 @@ public class Driver {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the no of companies");
         int companiesSize = sc.nextInt();
-        Company[] companyArray = new Company[companiesSize];
+        Stock[] companyArray = new Stock[companiesSize];
         double value;
         for (int i = 0; i < companiesSize; i++) {
-            Company company = new Company();
+            Stock company = new Stock();
             System.out.println("Enter current stock price of the company : " + (i + 1));
             company.setStockPrice(sc.nextDouble());
             System.out.println("Whether company's stock price rose today compare to yesterday?");
