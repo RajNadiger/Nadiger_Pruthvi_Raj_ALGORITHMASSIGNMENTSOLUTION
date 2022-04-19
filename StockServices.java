@@ -8,7 +8,7 @@ public class Constants {
 }
 
 public class StockServices {
-    public void displayStockPricesAsc(Company[] companyArray) {
+    public void displayStockPricesAsc(Stocks[] companyArray) {
         mergeSort(companyArray, ASC);
         System.out.println("Stock prices in ascending order are :");
         displayCompanies(companyArray);
